@@ -7,14 +7,19 @@
   "author": "Ekliptor",
   "license": "GPL",
   "scripts": {
-    "watch": "webpack --progress --colors --watch"
+    "watch": "webpack --progress --colors --watch",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@snyk/protect": "latest"
+  },
   "devDependencies": {
     "@types/es6-shim": "^0.31.39",
     "@types/jquery": "^2.0.46",
     "awesome-typescript-loader": "^5.0.0",
     "source-map-loader": "^0.2.3",
     "typescript": "^3.5.1"
-  }
+  },
+  "snyk": true
 }
